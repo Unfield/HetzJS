@@ -1,0 +1,25 @@
+{
+  "name": "hetz-js",
+  "version": "1.0.0",
+  "description": "library for the hetzner-cloud api",
+  "main": "hetz.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Unfield/HetzJS.git"
+  },
+  "keywords": [
+    "API",
+    "Hetzner",
+    "Cloud",
+    "Server"
+  ],
+  "author": "Marcel Drinkuth",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Unfield/HetzJS/issues"
+  },
+  "homepage": "https://github.com/Unfield/HetzJS#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
