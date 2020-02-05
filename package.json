@@ -1,6 +1,6 @@
 {
   "name": "hetz-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "library for the hetzner-cloud api",
   "main": "hetz.js",
   "repository": {
