@@ -1,11 +1,11 @@
 const request = require("request");
 
 class HetzJS {
-  registerClient(token) {
+  authenticate(token) {
     this.apiToken = token;
   }
 
-  isClientRegistered() {
+  isAPIkeyRegistered() {
     return typeof this.apiToken !== "undefined";
   }
 
@@ -23,7 +23,7 @@ class HetzJS {
             Authorization: "Bearer " + self.apiToken
           }
         };
-        if (self.isClientRegistered())
+        if (self.isAPIkeyRegistered())
           request(options, (err, res, body) => {
             callback(body);
           });
@@ -38,7 +38,7 @@ class HetzJS {
             Authorization: "Bearer " + self.apiToken
           }
         };
-        if (self.isClientRegistered())
+        if (self.isAPIkeyRegistered())
           request(options, (err, res, body) => {
             callback(body);
           });
@@ -52,7 +52,7 @@ class HetzJS {
             Authorization: "Bearer " + self.apiToken
           }
         };
-        if (self.isClientRegistered())
+        if (self.isAPIkeyRegistered())
           request(options, (err, res, body) => {
             callback(body);
           });
@@ -66,7 +66,7 @@ class HetzJS {
             Authorization: "Bearer " + self.apiToken
           }
         };
-        if (self.isClientRegistered())
+        if (self.isAPIkeyRegistered())
           request(options, (err, res, body) => {
             callback(body);
           });
@@ -81,7 +81,7 @@ class HetzJS {
           },
           body: JSON.stringify({ name: name })
         };
-        if (self.isClientRegistered())
+        if (self.isAPIkeyRegistered())
           request(options, (err, res, body) => {
             callback(body);
           });
@@ -95,7 +95,7 @@ class HetzJS {
             Authorization: "Bearer " + self.apiToken
           }
         };
-        if (self.isClientRegistered())
+        if (self.isAPIkeyRegistered())
           request(options, (err, res, body) => {
             callback(body);
           });
@@ -109,7 +109,7 @@ class HetzJS {
             Authorization: "Bearer " + self.apiToken
           }
         };
-        if (self.isClientRegistered())
+        if (self.isAPIkeyRegistered())
           request(options, (err, res, body) => {
             callback(body);
           });
@@ -123,7 +123,7 @@ class HetzJS {
             Authorization: "Bearer " + self.apiToken
           }
         };
-        if (self.isClientRegistered())
+        if (self.isAPIkeyRegistered())
           request(options, (err, res, body) => {
             callback(body);
           });
@@ -138,7 +138,7 @@ class HetzJS {
           },
           body: JSON.stringify(buildData)
         };
-        if (self.isClientRegistered())
+        if (self.isAPIkeyRegistered())
           request(options, (err, res, body) => {
             callback(body);
           });
@@ -156,7 +156,7 @@ class HetzJS {
           },
           body: JSON.stringify(bodyData)
         };
-        if (self.isClientRegistered())
+        if (self.isAPIkeyRegistered())
           request(options, (err, res, body) => {
             callback(body);
           });
@@ -174,7 +174,7 @@ class HetzJS {
           },
           body: JSON.stringify(bodyData)
         };
-        if (self.isClientRegistered())
+        if (self.isAPIkeyRegistered())
           request(options, (err, res, body) => {
             callback(body);
           });
@@ -192,7 +192,7 @@ class HetzJS {
           },
           body: JSON.stringify(bodyData)
         };
-        if (self.isClientRegistered())
+        if (self.isAPIkeyRegistered())
           request(options, (err, res, body) => {
             callback(body);
           });
@@ -210,7 +210,7 @@ class HetzJS {
           },
           body: JSON.stringify(bodyData)
         };
-        if (self.isClientRegistered())
+        if (self.isAPIkeyRegistered())
           request(options, (err, res, body) => {
             callback(body);
           });
@@ -230,7 +230,7 @@ class HetzJS {
             Authorization: "Bearer " + self.apiToken
           }
         };
-        if (module.parent.isClientRegistered())
+        if (module.parent.isAPIkeyRegistered())
           request(options, (err, res, body) => {
             callback(body);
           });
@@ -244,7 +244,7 @@ class HetzJS {
             Authorization: "Bearer " + self.apiToken
           }
         };
-        if (module.parent.isClientRegistered())
+        if (module.parent.isAPIkeyRegistered())
           request(options, (err, res, body) => {
             callback(body);
           });
@@ -264,7 +264,7 @@ class HetzJS {
             Authorization: "Bearer " + self.apiToken
           }
         };
-        if (module.parent.isClientRegistered())
+        if (module.parent.isAPIkeyRegistered())
           request(options, (err, res, body) => {
             callback(body);
           });
@@ -278,7 +278,7 @@ class HetzJS {
             Authorization: "Bearer " + self.apiToken
           }
         };
-        if (module.parent.isClientRegistered())
+        if (module.parent.isAPIkeyRegistered())
           request(options, (err, res, body) => {
             callback(body);
           });
