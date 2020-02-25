@@ -129,7 +129,6 @@ class HetzJS {
           });
       },
       create: function(buildData, callback) {
-        console.log("true");
         var options = {
           url: "https://api.hetzner.cloud/v1/servers",
           method: "POST",
@@ -138,7 +137,6 @@ class HetzJS {
             Authorization: "Bearer " + self.apiToken
           }
         };
-        console.log("yes yses");
         if (self.isAPIkeyRegistered())
           request(options, (err, res, body) => {
             callback(body);
@@ -196,7 +194,6 @@ class HetzJS {
           });
       },
       requestConsole: function(callback) {
-        console.log(id);
         var options = {
           url:
             "https://api.hetzner.cloud/v1/servers/" +
