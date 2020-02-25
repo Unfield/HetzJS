@@ -10,7 +10,7 @@ class HetzJS {
   }
 
   server(id) {
-    var self = this;
+    let self = this;
     return {
       id: id,
       poweron: function(callback) {
@@ -129,15 +129,16 @@ class HetzJS {
           });
       },
       create: function(buildData, callback) {
+        console.log("true");
         var options = {
           url: "https://api.hetzner.cloud/v1/servers",
           method: "POST",
           headers: {
             "Content-Type": "application/json",
             Authorization: "Bearer " + self.apiToken
-          },
-          body: JSON.stringify(buildData)
+          }
         };
+        console.log("yes yses");
         if (self.isAPIkeyRegistered())
           request(options, (err, res, body) => {
             callback(body);
@@ -153,8 +154,7 @@ class HetzJS {
           headers: {
             "Content-Type": "application/json",
             Authorization: "Bearer " + self.apiToken
-          },
-          body: JSON.stringify(bodyData)
+          }
         };
         if (self.isAPIkeyRegistered())
           request(options, (err, res, body) => {
@@ -164,15 +164,14 @@ class HetzJS {
       enableRescue: function(callback) {
         var options = {
           url:
-            "https://api.hetzner.cloud/v1/servers/{id}" +
+            "https://api.hetzner.cloud/v1/servers/" +
             id +
             "/actions/enable_rescue",
           method: "POST",
           headers: {
             "Content-Type": "application/json",
             Authorization: "Bearer " + self.apiToken
-          },
-          body: JSON.stringify(bodyData)
+          }
         };
         if (self.isAPIkeyRegistered())
           request(options, (err, res, body) => {
@@ -182,15 +181,14 @@ class HetzJS {
       disableRescue: function(callback) {
         var options = {
           url:
-            "https://api.hetzner.cloud/v1/servers/{id}" +
+            "https://api.hetzner.cloud/v1/servers/" +
             id +
             "/actions/disable_rescue",
           method: "POST",
           headers: {
             "Content-Type": "application/json",
             Authorization: "Bearer " + self.apiToken
-          },
-          body: JSON.stringify(bodyData)
+          }
         };
         if (self.isAPIkeyRegistered())
           request(options, (err, res, body) => {
@@ -198,17 +196,17 @@ class HetzJS {
           });
       },
       requestConsole: function(callback) {
+        console.log(id);
         var options = {
           url:
-            "https://api.hetzner.cloud/v1/servers/{id}" +
+            "https://api.hetzner.cloud/v1/servers/" +
             id +
             "/actions/request_console",
           method: "POST",
           headers: {
             "Content-Type": "application/json",
             Authorization: "Bearer " + self.apiToken
-          },
-          body: JSON.stringify(bodyData)
+          }
         };
         if (self.isAPIkeyRegistered())
           request(options, (err, res, body) => {
