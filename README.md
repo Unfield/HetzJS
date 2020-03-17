@@ -1,6 +1,6 @@
 # Hetz-JS
 
-Hetz-JS is an Node.js library that communicates with the Hetzner-Cloud API to make thinks even more easy for you.
+Hetz-JS is an Node.js library that communicates with the Hetzner-Cloud API to make things even more easy for you.
 
 ## Installation
 
